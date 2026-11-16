@@ -1,6 +1,6 @@
 # T3 Code themes
 
-Custom themes for [T3 Code](https://github.com/pingdotgg/t3code), the agent app. Each theme keeps the default T3 Code palette and adds an animated background behind the open thread.
+Custom themes for [T3 Code](https://github.com/pingdotgg/t3code), the agent app. Each theme adds animated effects that react to what your threads are doing.
 
 Made by [@beardwhocodes](https://x.com/beardwhocodes) on X.
 
@@ -8,7 +8,7 @@ Made by [@beardwhocodes](https://x.com/beardwhocodes) on X.
 
 | Theme | Preview | What it does |
 |---|---|---|
-| [Deep Field](themes/deep-field/) | <img src="themes/deep-field/flight.gif" width="320" alt="Deep Field theme: planets drift past behind a T3 Code thread"> | A slow flight through a solar system. Warp streaks show while the thread works. |
+| [Deep Field](themes/deep-field/) | <img src="themes/deep-field/flight.gif" width="320" alt="Deep Field theme: planets drift past behind a T3 Code thread"> | A shuttle cockpit with gunmetal control panels. A slow flight through a solar system plays through the window, with warp streaks while the thread works. |
 
 ## Install a theme
 

@@ -36,13 +36,24 @@ T3 Code rejects a theme that breaks these rules:
 
 ## CSS hooks
 
-Theme CSS cannot run JavaScript. It can read only the DOM. These hooks work in the current T3 Code version, but they are not a stable API, so a T3 Code update can break them:
+Theme CSS cannot run JavaScript. It can read only the DOM. The T3 MCP tool `t3_theme_read` returns the current list of stable selectors. These are the ones the themes here use:
+
+- `[data-slot="sidebar-inner"]`: the sidebar surface.
+- `[data-chat-header]`: the chat header.
+- `.messages-timeline-scroll`: the chat scroller, above the area background.
+- `[data-slot="composer-host"]`: the composer card.
+- `[data-thread-item]`: a sidebar thread row.
+
+These hooks also work, but they are not on the stable list, so a T3 Code update can break them:
 
 - `[data-workspace-area="conversation"]`: the thread timeline area. Put backgrounds here, on `::before` and `::after` with `z-index: -1` and `isolation: isolate` on the area.
 - `[data-sidebar-row]`: a sidebar thread row. Its `aria-label` is `"<title>, <status>, <project>"`. The open thread has `aria-current="page"`.
 - Statuses: `Working`, `Connecting`, `Completed`, `Failed`, `Pending Approval`, `Awaiting Input`, `Plan Ready`.
 - Example: `.dark:has([data-sidebar-row][aria-current="page"][aria-label*=", Working"])` matches while the open thread works.
 - `.dark` on the root element marks dark mode.
+- `var(--sidebar)` is the sidebar color from the theme palette.
+
+To stay under the 20,000-character limit, put colors in the palette, not in CSS. Palette roles cost no CSS characters.
 
 Keep text readable. Keep effects behind the timeline, and respect `prefers-reduced-motion`.
 
