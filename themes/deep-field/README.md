@@ -11,12 +11,14 @@ You sit in a shuttle cockpit. The thread area is the window, and a slow flight t
 - Planets that come toward you with true perspective: an earth, a red planet and a ringed giant.
 - An asteroid belt and two layers of stars.
 - **Warp while the thread works.** When the open thread's status is Working, light streaks race out from the center and the stars move about 7 times faster. When the thread stops, the normal flight comes back.
+- A dark tint behind replies and activity rows keeps text readable as bright objects pass behind it.
 
 **The cockpit**
 - A gunmetal sidebar, header and composer, with a thick frame around the window and a dark edge inside it.
 - T3 Code's own Nightly artwork (sky, stars, sparkles and clouds) at the top of the sidebar.
-- A status light on each thread row: blinking blue for Working, fast amber for Awaiting Input or Pending Approval, green for Completed, red for Failed, violet for Plan Ready.
+- A status light on each thread row. Blue pulses for Working, amber pulses faster for Awaiting Input or Pending Approval, green marks Completed, red marks Failed, and violet marks Plan Ready.
 - A blue edge on the open thread, and a thin light that moves along the bottom of the header.
+- Brighter secondary text, composer hints, and keyboard focus rings.
 - A soft light outline on project icons, so black icons stay visible.
 
 | Normal flight (6x speed) | Warp while Working (2x speed) |
@@ -25,7 +27,7 @@ You sit in a shuttle cockpit. The thread area is the window, and a slow flight t
 
 ![Deep Field: warp while Working](working.png)
 
-The previews come from a mock T3 Code page, made with [scripts/capture.sh](../../scripts/capture.sh). The GIFs are sped up. In the app, the flight is much slower.
+The previews use a mock T3 Code page. The stills show the current colors. The GIFs show an earlier build and play faster than the app.
 
 ## Install
 
@@ -39,6 +41,6 @@ t3 theme set themes/deep-field/deep-field.json
 - With `prefers-reduced-motion`, the animation stops.
 - The status lights and the warp effect read the thread status from the sidebar row's label. A T3 Code update can break them.
 - The window frame adds a small margin around the thread area.
-- The CSS is 19,701 of the 20,000 characters that T3 Code allows.
+- The CSS uses 19,870 characters and fits within the 20,000-character limit on older T3 Code versions.
 
 Made by [@beardwhocodes](https://x.com/beardwhocodes).
